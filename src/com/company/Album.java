@@ -36,6 +36,14 @@ public Album(String name, String artist){
         return null;
     }
 
+    public Song findSong(int trackNumber){
+    int index = trackNumber -1;
+        if ((index >= 0)&&(index < songs.size())){
+            return songs.get(index);
+        }
+        return null;
+    }
+
     public boolean addToPlayList(int trackNumber, LinkedList<Song> playList){
 //every song in album has a track number in order as we adding them. Own index position
     int index = trackNumber -1;
